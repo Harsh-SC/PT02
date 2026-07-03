@@ -1,10 +1,10 @@
 # Configuration
-$RepoUrl = "https://github.com/ORG/REPO.git"
-$ClonePath = "C:\Temp\Repo"
+$RepoUrl = "https://github.com/harshmodi008/PurpleTeam"
+$ClonePath = "C:\Repo"
 
 # Password source
-$PasswordUrl = "https://raw.githubusercontent.com/ORG/REPO/main/password.txt"
-$FallbackPassword = "MyArchivePassword"
+$PasswordUrl = "https://raw.githubusercontent.com/harshmodi008/PurpleTeam/refs/heads/main/password.txt"
+$FallbackPassword = "SUNCOR-PurpleTeam-12#$"
 
 # 7-Zip path
 $SevenZip = "C:\Program Files\7-Zip\7z.exe"
