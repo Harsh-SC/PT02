@@ -20,6 +20,9 @@ while ($listener.IsListening) {
     $response.OutputStream.Close()
 }
 
+//Additional Test
+New-NetFirewallRule -DisplayName "HTTP Backdoor 80" -Direction Inbound -Protocol TCP -LocalPort 80 -Action Allow
+New-NetFirewallRule -DisplayName "HTTP Backdoor 8080" -Direction Inbound -Protocol TCP -LocalPort 8080 -Action Allow
 
 //Scenario 3
 
