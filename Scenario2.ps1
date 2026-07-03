@@ -1,6 +1,6 @@
 # Configuration
 $RepoUrl = "https://github.com/harshmodi008/PurpleTeam"
-$ClonePath = "C:\Repo"
+$ClonePath = "C:\Users\hkmi8\Downloads\Tools\Test"
 
 # Password source
 $PasswordUrl = "https://raw.githubusercontent.com/harshmodi008/PurpleTeam/refs/heads/main/password.txt"
