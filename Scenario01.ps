@@ -1,5 +1,5 @@
 Get-Process | Out-File C:\PurpleLab\proc.txt
 $bytes = [System.Text.Encoding]::Unicode.GetBytes("Get-Process | Out-File C:\PurpleLab\proc.txt")
 $encoded = [Convert]::ToBase64String($bytes)
-$encoded
-powershell.exe -NoProfile -WindowStyle Hidden -EncodedCommand <PASTE>
+
+powershell.exe -NoProfile -WindowStyle Hidden -EncodedCommand $encoded
